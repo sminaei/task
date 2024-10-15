@@ -24,8 +24,6 @@ class TaskController extends Controller
            'user_id' => $request->input('user_id'),
        ]);
     $task->users()->attach($request['user_id']);
-//       $user = User::find(1);
-//       $user->tasks()->attach($request->tasks);
 
        return redirect()->route('tasks');
    }
